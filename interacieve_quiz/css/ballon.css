@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: aliceblue;
+    font-family: "coordinates", sans-serif;
+    color: rgb(248, 22, 10);
+    font-size: 40px;
+
+}
+
+#ballon {
+    position: absolute;
+    top: 925px;
+    left: 640px;
+
+  }
+  #ballon2 {
+    position: absolute;
+    top: 925px;
+    left: 840px;
+
+}
