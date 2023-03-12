@@ -4,8 +4,9 @@ body{
     overflow: hidden;
     background-color: aliceblue;
     font-family: "coordinates", sans-serif;
-    color: rgb(248, 22, 10);
+    color: white;
     font-size: 30px;
+    top: 30px
     text-align: center;
 
 
