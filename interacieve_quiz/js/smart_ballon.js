@@ -1,7 +1,7 @@
 var score = 0;
 var speed = 1;
-var floatTimer = window.setInterval(floatUp, 25);
-var floatTimer2 = window.setInterval(floatUp2, 25);
+var floatTimer = window.setInterval(floatUp, 80);
+var floatTimer2 = window.setInterval(floatUp2, 80);
 var rotateTimer = window.setInterval(rotateBallon, 500);
 var rotateTimer2 = window.setInterval(rotateBallon2, 500);
 var colours = ["red", "green", "blue", "yellow"];
