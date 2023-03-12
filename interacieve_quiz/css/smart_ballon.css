@@ -13,13 +13,13 @@ body{
 
 #ballon {
     position: absolute;
-    top: 625px;
+    top: 525px;
     left: 30px;
 
   }
   #ballon2 {
     position: absolute;
-    top: 625px;
+    top: 425px;
     right: 30px;
 
 }
