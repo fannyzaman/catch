@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="js/smart_ballon.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/ilr2sfa.css">
-    <link href="css/smart_ballon.css"rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/smart_ballon.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/ilr2sfa.css">
+  <link href="css/smart_ballon.css" rel="stylesheet"/>
 </head>
 <body>
-    
-      <p>
-        <img id="ballon" src="images/isaac.png" alt="ballon" height="128" width="99" onmousedown="popped()"/>
-        <img id="ballon2" src="images/adam.png" alt="ballon2" height="115" width="61" onmousedown="popped2()" />
-      </p>
-      <p id="scoreText">
-        Score: 0 punten
-      </p>
-
-  </body>
+  <p>
+    <img id="ballon" src="images/isaac.png" alt="ballon" height="128" width="99" onmousedown="popped()"/>
+    <img id="ballon2" src="images/adam.png" alt="ballon2" height="115" width="61" onmousedown="popped2()" />
+  </p>
+  <div id="scoreContainer">
+    <p id="scoreText">Score: 0 punten</p>
+  </div>
+  <button id="startButton">Start</button>
+</body>
 </html>
