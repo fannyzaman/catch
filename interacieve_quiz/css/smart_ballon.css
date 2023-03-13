@@ -2,13 +2,12 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: aliceblue;
+    background-color: rgb(94, 163, 104);
     font-family: "coordinates", sans-serif;
     color: white;
     font-size: 30px;
     top: 30px;
     text-align: center;
-
 
 }
 
