@@ -2,6 +2,9 @@ var score = 0;
 var speed = 1;
 var colours = ["red", "green", "blue", "yellow"];
 var floatTimer, floatTimer2, rotateTimer, rotateTimer2, colourTimer;
+var audio = new Audio();
+audio.src = 'sound/ATLAS01.mp3';
+audio.preload = 'auto';
 
 function startGame() {
   // Start the game
@@ -92,7 +95,6 @@ function popped() {
   document.getElementById("scoreText").innerText = "Score: " + score;
   setLeft("ballon", randomNumber(0, window.innerWidth - 100));
   setTop("ballon", window.innerHeight);
-  var audio = new Audio('sound/ATLAS01.mp3');
   audio.play();
 }
 
@@ -108,7 +110,6 @@ function popped2() {
     document.getElementById("scoreText").innerText = "Score: " + score;
     setLeft("ballon2", randomNumber(0, window.innerWidth - 100));
     setTop("ballon2", window.innerHeight);
-    var audio = new Audio('sound/ATLAS01.mp3');
     audio.play();
   }
 
