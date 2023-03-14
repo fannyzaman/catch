@@ -92,7 +92,7 @@ function popped() {
   document.getElementById("scoreText").innerText = "Score: " + score;
   setLeft("ballon", randomNumber(0, window.innerWidth - 100));
   setTop("ballon", window.innerHeight);
-  var audio = new Audio('sound/ATLAS01_01.aac');
+  var audio = new Audio('sound/ATLAS01_01_01.aac');
   audio.play();
 }
 
@@ -108,7 +108,7 @@ function popped2() {
     document.getElementById("scoreText").innerText = "Score: " + score;
     setLeft("ballon2", randomNumber(0, window.innerWidth - 100));
     setTop("ballon2", window.innerHeight);
-   var audio = new Audio('sound/ATLAS01_01.aac');
+   var audio = new Audio('sound/ATLAS01_01_01.aac');
   audio.play();
   }
 
