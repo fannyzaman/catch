@@ -23,5 +23,11 @@ body{
     right: 40px;
 
 }
+#startButton {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  }
 
 
