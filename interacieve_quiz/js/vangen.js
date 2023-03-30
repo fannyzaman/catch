@@ -88,9 +88,9 @@ function caughtPizza() {
 function handleKeys(e){
 
   // controleren of we linkse Pijltje hebben ingedrukt, zoja => speler op de x as met 1 verlagen
-  if(event.keyCode==37) {boyX--;}
+  if(e.keyCode==37) {boyX--;}
   // controleren of we rechtse Pijltje hebben ingedrukt, zoja => speler op de x as met 1 verhogen
-  if(event.keyCode==39) {boyX++;}
+  if(e.keyCode==39) {boyX++;}
 
   // functie oproepen om d elocatie van de speler in te stellen.
   // we geven de parameters door van wat we gaan aanspreken (id van de speler) en de nieuwe waarde voor zijn locatie
