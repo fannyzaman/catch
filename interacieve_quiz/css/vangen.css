@@ -12,12 +12,12 @@ body{
 #pizzavanger {
   position: absolute;
   left: 300px;
-  top: 500px; 
+  top: 500px;
+  
 
 }  
 
 #pizza {
-  width: 50px;
   position: absolute;
   top: 0px;
   left: 300px;
@@ -25,7 +25,6 @@ body{
 }
 #startButton {
   position: absolute;
-  bottom: 5;
   left: 50%;
   transform: translateX(-50%);
   }
