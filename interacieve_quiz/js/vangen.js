@@ -12,19 +12,13 @@ let pizzaImages= [
 "images/taart3.png"
 ];
 
-function setLeft(id, x, boardWidth) {
-  let element = document.getElementById(id);
-  if (x < 0) {
-    x = 0;
-  } else if (x > boardWidth - element.offsetWidth) {
-    x = boardWidth - element.offsetWidth;
-  }
-  element.style.left = x + "px";
+function setLeft(id,x){
+  document.getElementById(id).style.left= x+"px";
+}
+function setTop(id,y){
+  document.getElementById(id).style.top= y+"px";
 }
 
-function setTop(id, y) {
-  document.getElementById(id).style.top = y + "px";
-}
 
 function startGame() {
   console.log();
@@ -34,8 +28,8 @@ function startGame() {
   boyY = 10;
   pizzaX = 6;
   pizzaY = 0;
-  gameTimer = window.setInterval(movePizza, 300);
-  setLeft("pizzavanger", boyX * 50, 750); // pass the width of the game board as a parameter
+  gameTimer = window.setInterval(movePizza, 400);
+  setLeft("pizzavanger", boyX * 50); // pass the width of the game board as a parameter
   setTop("pizzavanger", boyY * 50);
   setLeft("pizza", pizzaX * 50);
   setTop("pizza", pizzaY * 50);
@@ -64,7 +58,7 @@ function movePizza() {
 
 function missedPizza() {
   pizzaY = 0;
-  pizzaX = randomNumber(2, 16);
+  pizzaX = randomNumber(2, 20);
   lives--;
   document.getElementById("levensText").innerText = "Kansen: " + lives;
   if (lives == 0) {
@@ -91,15 +85,14 @@ function caughtPizza() {
   document.getElementById("pizza").src = pizzaImages[randomNumber(0, pizzaImages.length - 1)];
 }
 
-document.onkeydown = handleKeys;
+function handleKeys(e){
 
-function handleKeys(event) {
-  // handle the arrow keys to move the pizzavanger
-  if (event.keyCode == 37 && pizzavangerX > 0) { // left arrow
-    pizzavangerX--;
-  } else if (event.keyCode == 39 && pizzavangerX < 14) { // right arrow
-    pizzavangerX++;
-  }
-  setLeft("pizzavanger", pizzavangerX * 50); // update the position of the pizzavanger
+  // controleren of we linkse Pijltje hebben ingedrukt, zoja => speler op de x as met 1 verlagen
+  if(event.keyCode==37) {boyX--;}
+  // controleren of we rechtse Pijltje hebben ingedrukt, zoja => speler op de x as met 1 verhogen
+  if(event.keyCode==39) {boyX++;}
+
+  // functie oproepen om d elocatie van de speler in te stellen.
+  // we geven de parameters door van wat we gaan aanspreken (id van de speler) en de nieuwe waarde voor zijn locatie
+  setLeft("pizzavanger", boyX*50);
 }
-
