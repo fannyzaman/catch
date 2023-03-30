@@ -7,9 +7,9 @@ let pizzaY = 0;
 let pizzavangerX = 6; // initialize the position of the pizzavanger
 let gameTimer;
 let pizzaImages= [
-"images/taart1.png", 
-"images/taart2.png",
-"images/taart3.png"
+"images/taart1+.png", 
+"images/taart2+.png",
+"images/taart3+.png"
 ];
 
 function setLeft(id,x){
