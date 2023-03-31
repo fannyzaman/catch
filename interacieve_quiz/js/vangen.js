@@ -92,7 +92,7 @@ function handleKeys(e){
   // controleren of we rechtse Pijltje hebben ingedrukt, zoja => speler op de x as met 1 verhogen
   if(e.keyCode==39) {boyX++;}
 
-  // functie oproepen om d elocatie van de speler in te stellen.
+  // functie oproepen om de locatie van de speler in te stellen.
   // we geven de parameters door van wat we gaan aanspreken (id van de speler) en de nieuwe waarde voor zijn locatie
   setLeft("pizzavanger", boyX*50);
 }
