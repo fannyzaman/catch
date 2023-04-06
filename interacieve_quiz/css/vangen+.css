@@ -39,7 +39,7 @@ body{
   
     @media only screen and (max-width: 768px) {
         #pizzavanger {
-          bottom: 10%;
+          bottom: 20%;
           max-height: 30%;
         }
         #pizza {
@@ -51,8 +51,8 @@ body{
       
       @media only screen and (min-width: 769px) and (max-width: 1024px) {
         #pizzavanger {
-          bottom: 15%;
-          max-height: 40%;
+          bottom: 20%;
+          max-height: 30%;
         }
         #pizza {
             top: 15%;
@@ -63,7 +63,7 @@ body{
 
       @media only screen and (min-width: 1025px) {
         #pizzavanger {
-          bottom: 20%;
+          bottom: 30%;
           max-height: 50%;
         }
         #pizza {
