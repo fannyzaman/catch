@@ -1,0 +1,73 @@
+body{
+    background-image: url("../images/achtergrond.png");
+    background-repeat: repeat;
+    background-size:cover;
+    
+    
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "coordinates", sans-serif;
+    color: #66eccc;
+    font-size: 40px;
+    text-align: center;
+    /*background-color: #E84E0F;*/
+  }
+  
+  #pizzavanger {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 50%;
+    max-height: 50%;
+  }
+  
+  #pizza {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 50%;
+    max-height: 50%;
+  }
+
+  #startButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+  
+  
+    @media only screen and (max-width: 768px) {
+        #pizzavanger {
+          bottom: 10%;
+          max-height: 30%;
+        }
+        #pizza {
+         top: 10%;
+            max-height: 30%;
+        }
+    }
+      
+      
+      @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        #pizzavanger {
+          bottom: 15%;
+          max-height: 40%;
+        }
+        #pizza {
+            top: 15%;
+            max-height: 40%;
+          }
+        }
+
+
+      @media only screen and (min-width: 1025px) {
+        #pizzavanger {
+          bottom: 20%;
+          max-height: 50%;
+        }
+        #pizza {
+            top: 20%;
+            max-height: 50%;
+          }
+        }
