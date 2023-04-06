@@ -43,11 +43,11 @@ body{
         
         #pizzavanger {
           bottom: 20%;
-          max-height: 10%;
+          max-height: 30%;
         }
         #pizza {
          top: 10%;
-            max-height: 10%;
+            max-height: 30%;
         }
     }
       
@@ -59,11 +59,11 @@ body{
         
         #pizzavanger {
           bottom: 20%;
-          max-height: 20%;
+          max-height: 30%;
         }
         #pizza {
             top: 15%;
-            max-height: 20%;
+            max-height: 40%;
           }
         }
 
