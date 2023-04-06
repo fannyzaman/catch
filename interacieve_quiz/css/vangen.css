@@ -54,7 +54,7 @@ body{
     }
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 700px) {
     /* Adjust pizza size and position for larger screens */
     #pizza {
       position: absolute;
