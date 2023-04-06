@@ -25,7 +25,7 @@ function startGame() {
   score = 0;
   lives = 3;
   boyX = 6;
-  boyY = 10;
+  boyY = 16;
   pizzaX = 6;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
@@ -96,3 +96,4 @@ function handleKeys(e){
   // we geven de parameters door van wat we gaan aanspreken (id van de speler) en de nieuwe waarde voor zijn locatie
   setLeft("pizzavanger", boyX*50);
 }
+
