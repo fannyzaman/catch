@@ -96,4 +96,17 @@ function handleKeys(e){
   // we geven de parameters door van wat we gaan aanspreken (id van de speler) en de nieuwe waarde voor zijn locatie
   setLeft("pizzavanger", boyX*50);
 }
+function handleTouch(event) {
+  // Get the x-coordinate of the touch event
+  var touchX = event.touches[0].clientX;
+  
+  // Calculate the new x-coordinate of the pizzavanger element
+  var newBoyX = touchX / window.innerWidth * 100;
+  
+  // Set the new x-coordinate of the pizzavanger element
+  setLeft("pizzavanger", newBoyX);
+  }
+  
+  // Add touch event listener to the document
+  document.addEventListener("touchmove", handleTouch, false);
 
