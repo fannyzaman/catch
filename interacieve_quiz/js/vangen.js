@@ -40,10 +40,10 @@ function startGame() {
   document.addEventListener("keydown", handleKeyboardInput);
 
   // Add event listeners for touch events to the start button and the game board element
-  let startButton = document.getElementById("start-button");
+  let startButton = document.getElementById("startButton");
   startButton.addEventListener("touchstart", handleStartTouch);
 
-  let gameBoard = document.getElementById("game-board");
+  let gameBoard = document.getElementById("gameBoard");
   gameBoard.addEventListener("touchstart", handleTouchStart);
   gameBoard.addEventListener("touchmove", handleTouchMove);
 
@@ -113,11 +113,4 @@ function handleTouchMove(e) {
   // get the x-coordinate of the touch event
   let newTouchX = e.touches[0].clientX;
 
-  // calculate the difference between the current touch position and the initial touch position
-  let touchDiff = newTouchX - touchX;
-
-  // update the player position based on the touch difference
-  let newBoyX = boyX + Math.round(touchDiff / 50);
-
-  // check if the new player position is within the game board boundaries
-  if (newBoyX >= 0 && newBoyX <= 11
+  // calculate
