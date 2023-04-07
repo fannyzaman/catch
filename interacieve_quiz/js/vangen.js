@@ -97,6 +97,20 @@ function handleKeys(e){
   setLeft("pizzavanger", boyX*50);
 }
 
+let touchX = 6;
+
+// add event listeners for touch events to the game board element
+let gameBoard = document.getElementById("game-board");
+
+gameBoard.addEventListener("touchstart", handleTouchStart);
+gameBoard.addEventListener("touchmove", handleTouchMove);
+
+// define the touch event handlers
+function handleTouchStart(e) {
+  // get the x-coordinate of the touch event
+  touchX = e.touches[0].clientX;
+}
+
 function handleTouchMove(e) {
   // get the x-coordinate of the touch event
   let newTouchX = e.touches[0].clientX;
@@ -113,3 +127,19 @@ function handleTouchMove(e) {
   // update the touch position for the next touch event
   touchX = newTouchX;
 }
+
+function handleKeys(e) {
+  if (e.keyCode === 37) {
+    boyX -= 1;
+    setLeft("pizzavanger", boyX * 50);
+  } else if (e.keyCode === 39) {
+    boyX += 1;
+    setLeft("pizzavanger", boyX * 50);
+  }
+}
+
+function setLeft(id, value) {
+  let element = document.getElementById(id);
+  element.style.left = value + "px";
+}
+
