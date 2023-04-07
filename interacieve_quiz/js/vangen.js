@@ -87,7 +87,7 @@ function caughtPizza() {
 }
 var pizzavanger = document.getElementById("pizzavanger");
 
-var hammer = new Hammer(pizzavanger);
+var hammer = new hammer(pizzavanger);
 
 hammer.on("pan", function(event) {
   var deltaX = event.deltaX;
