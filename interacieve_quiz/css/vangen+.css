@@ -17,7 +17,7 @@ body{
     outline: none;
   }
 
-  #game-board {
+  #gameBoard {
     width: 80vw; /* set the width to 80% of the viewport width */
     height: 80vh; /* set the height to 80% of the viewport height */
     border: 1px solid black;
