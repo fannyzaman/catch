@@ -19,6 +19,7 @@ body{
     transform: translate(-50%, 0);
     max-width: 50%;
     max-height: 50%;
+    top: 80% !important;
   }
   
   #pizza {
