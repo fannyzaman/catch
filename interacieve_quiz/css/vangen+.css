@@ -38,38 +38,48 @@ body{
   
      @media only screen and (max-width: 768px) {
         body {
-            background-image: url("../images/achtergrond(640).png");
-            background-size: contain;
+          background-image: url("../images/achtergrond(640).png");
+          background-size: cover;
           }
         
         #pizzavanger {
           bottom: 20%;
-          max-height: 30%;
+          max-height: 10%;
+          max-width: 10%;
         }
         #pizza {
          top: 10%;
-            max-height: 30%;
+            max-height: 10%;
+            max-width: 10%;
         }
     }
       
       
       @media only screen and (min-width: 769px) and (max-width: 1024px) {
         body {
-            background-size: contain;
+          background-image: url("../images/achtergrond(750).png");
+          background-size: cover;
           }
         
         #pizzavanger {
           bottom: 20%;
-          max-height: 30%;
+          max-height: 20%;
+          max-width: 20%;
         }
         #pizza {
             top: 15%;
-            max-height: 40%;
+            max-height: 20%;
+            max-width: 20%;
           }
         }
 
 
       @media only screen and (min-width: 1025px) {
+        body {
+          background-image: url("../images/achtergrond(1080).png");
+          background-size: cover;
+          }
+
         #pizzavanger {
           bottom: 30%;
           max-height: 50%;
