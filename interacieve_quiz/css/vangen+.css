@@ -1,8 +1,5 @@
 body{
   height: 100vh;
-
-  
-  
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -60,3 +57,45 @@ body{
   left: 50%;
   transform: translateX(-50%);
   }
+
+
+   @media only screen and (max-width: 768px) {
+      body {
+        background-image: url("../images/achtergrond(640).png");
+        background-size: cover;
+        }
+      
+        #pizza {
+          max-width: 15%;
+          max-height: 15%;
+          
+        }
+      
+        #pizzavanger {
+          z-index: 2;
+          max-width: 15%;
+          max-height: 15%;
+          bottom: 40%; /* set a lower value for larger screens */
+        }
+  }
+    
+    
+    @media screen and (min-width: 769px) {
+      body {
+        background-image: url("../images/achtergrond(750).png");
+        background-size: 100% auto;
+        }
+      
+        #pizza {
+          max-width: 15%;
+          max-height: 15%;
+          
+        }
+      
+        #pizzavanger {
+          max-width: 15%;
+          max-height: 15%;
+          bottom: 10%; /* set a lower value for the smallest screen */
+        }
+      }
+
