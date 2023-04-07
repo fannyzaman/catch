@@ -1,8 +1,8 @@
 let score = 0;
 let lives = 3;
-let boyX = 6;
-let boyY = 8;
-let pizzaX = 6;
+let boyX = 9;
+let boyY = 18;
+let pizzaX = 9;
 let pizzaY = 0;
 let pizzavangerX = 6; // initialize the position of the pizzavanger
 let gameTimer;
@@ -24,9 +24,9 @@ function startGame() {
   console.log();
   score = 0;
   lives = 3;
-  boyX = 6;
-  boyY = 8;
-  pizzaX = 6;
+  boyX = 9;
+  boyY = 18;
+  pizzaX = 9;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
   setLeft("pizzavanger", boyX * 50); // pass the width of the game board as a parameter
@@ -96,6 +96,7 @@ function handleKeys(e){
   // we geven de parameters door van wat we gaan aanspreken (id van de speler) en de nieuwe waarde voor zijn locatie
   setLeft("pizzavanger", boyX*50);
 }
+
 function handleTouch(event) {
   // Get the x-coordinate of the touch event
   var touchX = event.touches[0].clientX;
@@ -109,4 +110,3 @@ function handleTouch(event) {
   
   // Add touch event listener to the document
   document.addEventListener("touchmove", handleTouch, false);
-
