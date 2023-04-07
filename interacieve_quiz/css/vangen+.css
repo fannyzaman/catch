@@ -18,12 +18,15 @@ body{
   }
 
   #gameBoard {
-    width: 100vw; /* set the width to 80% of the viewport width */
-    height: 100vh; /* set the height to 80% of the viewport height */
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    touch-action: manipulation;
+  width: 100vw; /* set the width to 80% of the viewport width */
+  height: 100vh; /* set the height to 80% of the viewport height */
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   }
   
   .row {
