@@ -39,16 +39,6 @@ function startGame() {
   // Add event listener for arrow keys
   document.addEventListener("keydown", handleKeyboardInput);
 
-  // Add event listeners for touch events to the start button and the game board element
-  let startButton = document.getElementById("startButton");
-  startButton.addEventListener("touchstart", handleStartTouch);
-
-  let pizzavanger = document.getElementById("pizzavanger");
-  pizzavanger.addEventListener("touchstart", handleTouchStart);
-  pizzavanger.addEventListener("touchmove", handleTouchMove);
-
-  // Set the touch-action CSS property for the game board element
-  gameBoard.style.touchAction = "manipulation";
 }
 
 function movePizza() {
@@ -96,36 +86,34 @@ function caughtPizza() {
   document.getElementById("pizza").src = pizzaImages[randomNumber(0, pizzaImages.length - 1)];
 }
 
-let touchX = 6;
+var pizzavanger = document.getElementById("pizzavanger");
+var gameBoard = document.getElementById("gameBoard");
 
-// define the touch event handlers
-function handleStartTouch(e) {
-  // start the game when the start button is touched
-  startGame();
-}
+var isDragging = false;
+var startX, startY;
+var translateX = 0, translateY = 0;
 
-function handleTouchStart(e) {
-  // get the x-coordinate of the touch event
-  touchX = e.touches[0].clientX;
-}
+pizzavanger.addEventListener("touchstart", function(event) {
+  isDragging = true;
+  startX = event.touches[0].clientX;
+  startY = event.touches[0].clientY;
+});
 
-function handleTouchMove(e) {
-  // get the x-coordinate of the touch event
-  let newTouchX = e.touches[0].clientX;
+pizzavanger.addEventListener("touchmove", function(event) {
+  if (isDragging) {
+    var currentX = event.touches[0].clientX;
+    var currentY = event.touches[0].clientY;
+    translateX += currentX - startX;
+    translateY += currentY - startY;
+    startX = currentX;
+    startY = currentY;
+    pizzavanger.style.transform = "translate(" + translateX + "px, " + translateY + "px)";
+  }
+});
 
-  // calculate the difference between the current touch position and the initial touch position
-  let touchDiff = newTouchX - touchX;
-
-  // update the player position based on the touch difference
-  boyX += Math.round(touchDiff / 50);
-
-  // set the new position of the player element
-  let pizzavanger = document.getElementById("pizzavanger");
-  pizzavanger.style.left = (boyX * 50) + "px";
-
-  // update the touch position for the next touch event
-  touchX = newTouchX;
-}
+pizzavanger.addEventListener("touchend", function(event) {
+  isDragging = false;
+});
 
 function handleKeyboardInput(e) {
   // move the player left or right based on the arrow key pressed
