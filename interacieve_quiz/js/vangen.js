@@ -1,10 +1,10 @@
 let score = 0;
 let lives = 3;
 let boyX = 6;
-let boyY = 15;
+let boyY = 7;
 let pizzaX = 6;
 let pizzaY = 0;
-let pizzavangerX = 15; // initialize the position of the pizzavanger
+let pizzavangerX = 6; // initialize the position of the pizzavanger
 let gameTimer;
 let pizzaImages= [
 "images/taart1+.png", 
@@ -25,7 +25,7 @@ function startGame() {
   score = 0;
   lives = 3;
   boyX = 6;
-  boyY = 15;
+  boyY = 7;
   pizzaX = 6;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
