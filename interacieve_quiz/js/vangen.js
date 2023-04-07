@@ -58,7 +58,7 @@ function movePizza() {
 
 function missedPizza() {
   pizzaY = 0;
-  pizzaX = randomNumber(2, 9);
+  pizzaX = randomNumber(3, 8);
   lives--;
   document.getElementById("levensText").innerText = "Kansen: " + lives;
   if (lives == 0) {
@@ -79,7 +79,7 @@ function gameOver() {
 
 function caughtPizza() {
   pizzaY = 0;
-  pizzaX = randomNumber(2, 9);
+  pizzaX = randomNumber(3, 8);
   score++;
   document.getElementById("scoreText").innerText = "Score: " + score;
   document.getElementById("pizza").src = pizzaImages[randomNumber(0, pizzaImages.length - 1)];
