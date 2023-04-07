@@ -43,7 +43,7 @@ body{
     transform: translate(-50%, 0);
     max-width: 20%;
     max-height: 20%;
-    top: 50%; /* set a higher value for smaller screens */
+    top: 40%; /* set a higher value for smaller screens */
   }
 
   #startButton {
