@@ -27,7 +27,6 @@ body{
     display: flex;
     flex-wrap: wrap;
   }
-
   
   #pizzavanger {
     position: absolute;
@@ -53,27 +52,27 @@ body{
     }
   
   
-     @media only screen and (max-width: 700px) {
+     @media only screen and (max-width: 640px) {
         body {
           background-image: url("../images/achtergrond(640).png");
           background-size: cover;
           }
         
         #pizzavanger {
-          top: 70%;
+          bottom: 2%;
           max-height: 10%;
           max-width: 10%;
           
         }
         #pizza {
-         top: 30%;
+            top: 30%;
             max-height: 10%;
             max-width: 10%;
         }
     }
       
       
-      @media only screen and (min-width: 701px) and (max-width: 1024px) {
+      @media only screen and (min-width: 641px) and (max-width: 1024px) {
         body {
           background-image: url("../images/achtergrond(750).png");
           background-size: 100% auto;
@@ -82,12 +81,31 @@ body{
         #pizzavanger {
           max-height: 20%;
           max-width: 20%;
-          top: 70%;
+          bottom: 5%;
         }
         #pizza {
-            top: 15%;
+            bottom: 15%;
             max-height: 20%;
             max-width: 20%;
+          }
+        }
+
+
+      @media only screen and (min-width: 1025px) {
+        body {
+          background-image: url("../images/achtergrond(1080).png");
+          background-size: 100% auto;
+          }
+
+        #pizzavanger {
+          
+          max-height: 50%;
+          top: 80%;
+          bottom: 10%;
+        }
+        #pizza {
+            top: 20%;
+            max-height: 50%;
           }
         }
 
