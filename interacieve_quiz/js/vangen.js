@@ -113,4 +113,27 @@ function handleTouchMove(e) {
   // get the x-coordinate of the touch event
   let newTouchX = e.touches[0].clientX;
 
-  // calculate
+  // update the player position based on the touch difference
+  let newBoyX = boyX + Math.round(touchDiff / 50);
+
+  // check if the new player position is within the game board boundaries
+  if (newBoyX >= 0 && newBoyX <= 11) {
+    boyX = newBoyX;
+    setLeft("pizzavanger", boyX * 50);
+  }
+}
+
+function handleKeyboardInput(e) {
+  // move the player left or right based on the arrow key pressed
+  if (e.keyCode == 37) { // left arrow
+    if (boyX > 0) {
+      boyX--;
+      setLeft("pizzavanger", boyX * 50);
+    }
+  } else if (e.keyCode == 39) { // right arrow
+    if (boyX < 11) {
+      boyX++;
+      setLeft("pizzavanger", boyX * 50);
+    }
+  }
+}
