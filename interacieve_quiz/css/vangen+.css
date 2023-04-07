@@ -14,9 +14,6 @@ body{
   text-align: center;
 }
 
-button:focus {
-  outline: none;
-}
 
 #gameBoard {
   position: absolute;
@@ -49,6 +46,7 @@ button:focus {
 }
 
 #pizzavanger {
+  z-index: 2;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
