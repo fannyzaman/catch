@@ -48,7 +48,7 @@ body{
           bottom: 20%;
           max-height: 10%;
           max-width: 10%;
-          top: 30%;
+          
         }
         #pizza {
          top: 30%;
@@ -65,10 +65,9 @@ body{
           }
         
         #pizzavanger {
-          bottom: 20%;
           max-height: 20%;
           max-width: 20%;
-          top: 20%;
+          top: 70%;
         }
         #pizza {
             top: 15%;
@@ -85,7 +84,7 @@ body{
           }
 
         #pizzavanger {
-          bottom: 30%;
+          
           max-height: 50%;
           top: 80%;
         }
