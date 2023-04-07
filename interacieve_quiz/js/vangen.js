@@ -90,7 +90,7 @@ let touchX = 6;
 // add event listeners for touch events to the game board element
 let gameBoard = document.getElementById("game-board");
 
-gameBoard.addEventListener("touchstart", handleTouchStart);
+
 gameBoard.addEventListener("touchmove", handleTouchMove);
 
 // define the touch event handlers
