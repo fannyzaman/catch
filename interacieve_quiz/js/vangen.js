@@ -1,7 +1,7 @@
 let score = 0;
 let lives = 3;
 let boyX = 6;
-let boyY = 8;
+let boyY = 6;
 let pizzaX = 6;
 let pizzaY = 0;
 let pizzavangerX = 6; // initialize the position of the pizzavanger
@@ -25,7 +25,7 @@ function startGame() {
   score = 0;
   lives = 3;
   boyX = 6;
-  boyY = 8;
+  boyY = 6;
   pizzaX = 6;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
@@ -38,6 +38,17 @@ function startGame() {
 
   // Add event listener for arrow keys
   document.addEventListener("keydown", handleKeyboardInput);
+
+  // Add event listeners for touch events to the start button and the game board element
+  let startButton = document.getElementById("start-button");
+  startButton.addEventListener("touchstart", handleStartTouch);
+
+  let gameBoard = document.getElementById("game-board");
+  gameBoard.addEventListener("touchstart", handleTouchStart);
+  gameBoard.addEventListener("touchmove", handleTouchMove);
+
+  // Set the touch-action CSS property for the game board element
+  gameBoard.style.touchAction = "manipulation";
 }
 
 function movePizza() {
@@ -87,13 +98,12 @@ function caughtPizza() {
 
 let touchX = 6;
 
-// add event listeners for touch events to the game board element
-let gameBoard = document.getElementById("gameBoard");
-
-gameBoard.addEventListener("touchstart", handleTouchStart);
-gameBoard.addEventListener("touchmove", handleTouchMove);
-
 // define the touch event handlers
+function handleStartTouch(e) {
+  // start the game when the start button is touched
+  startGame();
+}
+
 function handleTouchStart(e) {
   // get the x-coordinate of the touch event
   touchX = e.touches[0].clientX;
@@ -107,31 +117,7 @@ function handleTouchMove(e) {
   let touchDiff = newTouchX - touchX;
 
   // update the player position based on the touch difference
-  boyX += Math.round(touchDiff / 50);
+  let newBoyX = boyX + Math.round(touchDiff / 50);
 
-  // set the new position of the player element
-  setLeft("pizzavanger", boyX * 50);
-
-  // update the touch position for the next touch event
-  touchX = newTouchX;
-}
-
-function handleKeyboardInput(e) {
-  if (e.keyCode === 37) {
-    boyX -= 1;
-    setLeft("pizzavanger", boyX * 50);
-  } else if (e.keyCode === 39) {
-    boyX += 1;
-    setLeft("pizzavanger", boyX * 50);
-  }
-}
-
-function setLeft(id, value) {
-  let element = document.getElementById(id);
-  element.style.left = value + "px";
-}
-
-function setTop(id, value) {
-  let element = document.getElementById(id);
-  element.style.top = value + "px";
-}
+  // check if the new player position is within the game board boundaries
+  if (newBoyX >= 0 && newBoyX <= 11
