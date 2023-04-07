@@ -1,7 +1,7 @@
 let score = 0;
 let lives = 3;
 let boyX = 9;
-let boyY = 18;
+let boyY = 16;
 let pizzaX = 9;
 let pizzaY = 0;
 let pizzavangerX = 6; // initialize the position of the pizzavanger
@@ -25,7 +25,7 @@ function startGame() {
   score = 0;
   lives = 3;
   boyX = 9;
-  boyY = 18;
+  boyY = 16;
   pizzaX = 9;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
