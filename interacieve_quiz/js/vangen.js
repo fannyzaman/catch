@@ -1,8 +1,8 @@
 let score = 0;
 let lives = 3;
 let boyX = 6;
-let boyY = 6;
-let pizzaX = 8;
+let boyY = 12;
+let pizzaX = 6;
 let pizzaY = 0;
 let pizzavangerX = 6; // initialize the position of the pizzavanger
 let gameTimer;
@@ -25,7 +25,7 @@ function startGame() {
   score = 0;
   lives = 3;
   boyX = 6;
-  boyY = 8;
+  boyY = 12;
   pizzaX = 6;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
@@ -37,7 +37,7 @@ function startGame() {
   document.getElementById("levensText").innerText = "Kansen: " + lives;
 
   // Add event listener for arrow keys
-  document.addEventListener("keydown", handleKeys);
+  document.addEventListener("keydown", handleKeyboardInput);
 }
 
 function movePizza() {
@@ -58,7 +58,7 @@ function movePizza() {
 
 function missedPizza() {
   pizzaY = 0;
-  pizzaX = randomNumber(3, 8);
+  pizzaX = randomNumber(2, 9);
   lives--;
   document.getElementById("levensText").innerText = "Kansen: " + lives;
   if (lives == 0) {
@@ -79,22 +79,10 @@ function gameOver() {
 
 function caughtPizza() {
   pizzaY = 0;
-  pizzaX = randomNumber(3, 8);
+  pizzaX = randomNumber(2, 9);
   score++;
   document.getElementById("scoreText").innerText = "Score: " + score;
   document.getElementById("pizza").src = pizzaImages[randomNumber(0, pizzaImages.length - 1)];
-}
-
-function handleKeys(e){
-
-  // controleren of we linkse Pijltje hebben ingedrukt, zoja => speler op de x as met 1 verlagen
-  if(e.keyCode==37) {boyX--;}
-  // controleren of we rechtse Pijltje hebben ingedrukt, zoja => speler op de x as met 1 verhogen
-  if(e.keyCode==39) {boyX++;}
-
-  // functie oproepen om de locatie van de speler in te stellen.
-  // we geven de parameters door van wat we gaan aanspreken (id van de speler) en de nieuwe waarde voor zijn locatie
-  setLeft("pizzavanger", boyX*50);
 }
 
 let touchX = 6;
@@ -128,7 +116,7 @@ function handleTouchMove(e) {
   touchX = newTouchX;
 }
 
-function handleKeys(e) {
+function handleKeyboardInput(e) {
   if (e.keyCode === 37) {
     boyX -= 1;
     setLeft("pizzavanger", boyX * 50);
@@ -143,3 +131,7 @@ function setLeft(id, value) {
   element.style.left = value + "px";
 }
 
+function setTop(id, value) {
+  let element = document.getElementById(id);
+  element.style.top = value + "px";
+}
