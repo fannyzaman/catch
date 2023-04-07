@@ -43,9 +43,9 @@ function startGame() {
   let startButton = document.getElementById("startButton");
   startButton.addEventListener("touchstart", handleStartTouch);
 
-  let gameBoard = document.getElementById("gameBoard");
-  gameBoard.addEventListener("touchstart", handleTouchStart);
-  gameBoard.addEventListener("touchmove", handleTouchMove);
+  let pizzavanger = document.getElementById("pizzavanger");
+  pizzavanger.addEventListener("touchstart", handleTouchStart);
+  pizzavanger.addEventListener("touchmove", handleTouchMove);
 
   // Set the touch-action CSS property for the game board element
   gameBoard.style.touchAction = "manipulation";
@@ -113,14 +113,18 @@ function handleTouchMove(e) {
   // get the x-coordinate of the touch event
   let newTouchX = e.touches[0].clientX;
 
-  // update the player position based on the touch difference
-  let newBoyX = boyX + Math.round(touchDiff / 50);
+  // calculate the difference between the current touch position and the initial touch position
+  let touchDiff = newTouchX - touchX;
 
-  // check if the new player position is within the game board boundaries
-  if (newBoyX >= 0 && newBoyX <= 11) {
-    boyX = newBoyX;
-    setLeft("pizzavanger", boyX * 50);
-  }
+  // update the player position based on the touch difference
+  boyX += Math.round(touchDiff / 50);
+
+  // set the new position of the player element
+  let pizzavanger = document.getElementById("pizzavanger");
+  pizzavanger.style.left = (boyX * 50) + "px";
+
+  // update the touch position for the next touch event
+  touchX = newTouchX;
 }
 
 function handleKeyboardInput(e) {
