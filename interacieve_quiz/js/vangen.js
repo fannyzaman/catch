@@ -25,7 +25,7 @@ function startGame() {
   score = 0;
   lives = 3;
   boyX = 6;
-  boyY = 10;
+  boyY = 8;
   pizzaX = 6;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
