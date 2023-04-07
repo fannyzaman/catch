@@ -1,7 +1,7 @@
 let score = 0;
 let lives = 3;
 let boyX = 6;
-let boyY = 10;
+let boyY = 8;
 let pizzaX = 6;
 let pizzaY = 0;
 let pizzavangerX = 6; // initialize the position of the pizzavanger
