@@ -97,16 +97,32 @@ function handleKeys(e){
   setLeft("pizzavanger", boyX*50);
 }
 
-function handleTouch(event) {
-  // Get the x-coordinate of the touch event
-  var touchX = event.touches[0].clientX;
-  
-  // Calculate the new x-coordinate of the pizzavanger element
-  var newBoyX = touchX / window.innerWidth * 100;
-  
-  // Set the new x-coordinate of the pizzavanger element
-  setLeft("pizzavanger", newBoyX);
-  }
-  
-  // Add touch event listener to the document
-  document.addEventListener("touchmove", handleTouch, false);
+// get a reference to the game board element
+const gameBoard = document.getElementById("game-board");
+
+// add event listeners for touch events to the game board element
+gameBoard.addEventListener("touchstart", handleTouchStart, false);
+gameBoard.addEventListener("touchmove", handleTouchMove, false);
+
+// define the touch event handlers
+function handleTouchStart(e) {
+  // get the x-coordinate of the touch event
+  touchX = e.touches[0].clientX;
+}
+
+function handleTouchMove(e) {
+  // get the x-coordinate of the touch event
+  let newTouchX = e.touches[0].clientX;
+
+  // calculate the difference between the current touch position and the initial touch position
+  let touchDiff = newTouchX - touchX;
+
+  // update the player position based on the touch difference
+  boyX += Math.round(touchDiff / 50);
+
+  // set the new position of the player element
+  setLeft("pizzavanger", boyX * 50);
+
+  // update the touch position for the next touch event
+  touchX = newTouchX;
+}
