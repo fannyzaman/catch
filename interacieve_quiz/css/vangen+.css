@@ -60,14 +60,14 @@ body{
           }
         
           #pizza {
-            max-width: 10%;
-            max-height: 10%;
+            max-width: 15%;
+            max-height: 15%;
             
           }
         
           #pizzavanger {
-            max-width: 10%;
-            max-height: 10%;
+            max-width: 15%;
+            max-height: 15%;
             bottom: 40%; /* set a lower value for larger screens */
           }
     }
