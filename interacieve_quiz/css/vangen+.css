@@ -34,7 +34,7 @@ body{
     transform: translate(-50%, 0);
     max-width: 20%;
     max-height: 20%;
-    top: 10%; /* set a higher value for smaller screens */
+    top: 5%; /* set a higher value for smaller screens */
   }
   
   #pizzavanger {
@@ -43,7 +43,7 @@ body{
     transform: translate(-50%, 0);
     max-width: 20%;
     max-height: 20%;
-    top: 40%; /* set a higher value for smaller screens */
+    bottom: 5%; /* set a higher value for smaller screens */
   }
 
   #startButton {
@@ -62,18 +62,18 @@ body{
           #pizza {
             max-width: 10%;
             max-height: 10%;
-            bottom: 10%; /* set a lower value for larger screens */
+            
           }
         
           #pizzavanger {
             max-width: 10%;
             max-height: 10%;
-            bottom: 5%; /* set a lower value for larger screens */
+            bottom: 40%; /* set a lower value for larger screens */
           }
     }
       
       
-      @media screen and (min-width: 1136px) {
+      @media screen and (min-width: 769px) {
         body {
           background-image: url("../images/achtergrond(750).png");
           background-size: 100% auto;
@@ -82,12 +82,12 @@ body{
           #pizza {
             max-width: 15%;
             max-height: 15%;
-            bottom: 5%; /* set a lower value for the smallest screen */
+            
           }
         
           #pizzavanger {
             max-width: 15%;
             max-height: 15%;
-            bottom: 2%; /* set a lower value for the smallest screen */
+            bottom: 10%; /* set a lower value for the smallest screen */
           }
         }
