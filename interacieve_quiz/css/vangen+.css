@@ -28,21 +28,22 @@ body{
     flex-wrap: wrap;
   }
   
-  #pizzavanger {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    max-width: 50%;
-    max-height: 50%;
-    bottom: 10%; /* set a higher value for smaller screens */
-  }
-  
   #pizza {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 20%;
+    max-height: 20%;
+    top: 10%; /* set a higher value for smaller screens */
+  }
+  
+  #pizzavanger {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 20%;
+    max-height: 20%;
+    top: 50%; /* set a higher value for smaller screens */
   }
 
   #startButton {
@@ -52,77 +53,41 @@ body{
     }
   
   
-     @media only screen and (max-width: 640px) {
+     @media only screen and (max-width: 768px) {
         body {
           background-image: url("../images/achtergrond(640).png");
           background-size: cover;
           }
         
-        #pizzavanger {
-          bottom: 2%;
-          max-height: 10%;
-          max-width: 10%;
-          
-        }
-        #pizza {
-            top: 30%;
-            max-height: 10%;
+          #pizza {
             max-width: 10%;
-        }
+            max-height: 10%;
+            bottom: 10%; /* set a lower value for larger screens */
+          }
+        
+          #pizzavanger {
+            max-width: 10%;
+            max-height: 10%;
+            bottom: 5%; /* set a lower value for larger screens */
+          }
     }
       
       
-      @media only screen and (min-width: 641px) and (max-width: 1024px) {
+      @media screen and (min-width: 1136px) {
         body {
           background-image: url("../images/achtergrond(750).png");
           background-size: 100% auto;
           }
         
-        #pizzavanger {
-          max-height: 20%;
-          max-width: 20%;
-          bottom: 5%;
-        }
-        #pizza {
-            bottom: 15%;
-            max-height: 20%;
-            max-width: 20%;
+          #pizza {
+            max-width: 15%;
+            max-height: 15%;
+            bottom: 5%; /* set a lower value for the smallest screen */
           }
-        }
-
-
-      @media only screen and (min-width: 1025px) {
-        body {
-          background-image: url("../images/achtergrond(1080).png");
-          background-size: 100% auto;
-          }
-
-        #pizzavanger {
-          
-          max-height: 50%;
-          top: 80%;
-          bottom: 10%;
-        }
-        #pizza {
-            top: 20%;
-            max-height: 50%;
-          }
-        }
-
-
-      @media only screen and (min-width: 1025px) {
-        body {
-          background-image: url("../images/achtergrond(1080).png");
-          background-size: 100% auto;
-          }
-
-        #pizzavanger {
-          
-          max-height: 50%;
-          top: 80%;
-        }
-        #pizza {
-            top: 20%;
-            max-height: 50%;
+        
+          #pizzavanger {
+            max-width: 15%;
+            max-height: 15%;
+            bottom: 2%; /* set a lower value for the smallest screen */
           }
         }
