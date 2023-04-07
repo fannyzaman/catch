@@ -1,8 +1,8 @@
 let score = 0;
 let lives = 3;
-let boyX = 9;
+let boyX = 6;
 let boyY = 16;
-let pizzaX = 9;
+let pizzaX = 6;
 let pizzaY = 0;
 let pizzavangerX = 6; // initialize the position of the pizzavanger
 let gameTimer;
@@ -24,9 +24,9 @@ function startGame() {
   console.log();
   score = 0;
   lives = 3;
-  boyX = 9;
+  boyX = 6;
   boyY = 16;
-  pizzaX = 9;
+  pizzaX = 6;
   pizzaY = 0;
   gameTimer = window.setInterval(movePizza, 400);
   setLeft("pizzavanger", boyX * 50); // pass the width of the game board as a parameter
