@@ -85,35 +85,16 @@ function caughtPizza() {
   document.getElementById("scoreText").innerText = "Score: " + score;
   document.getElementById("pizza").src = pizzaImages[randomNumber(0, pizzaImages.length - 1)];
 }
-
 var pizzavanger = document.getElementById("pizzavanger");
-var gameBoard = document.getElementById("gameBoard");
 
-var isDragging = false;
-var startX, startY;
-var translateX = 0, translateY = 0;
+var hammer = new Hammer(pizzavanger);
 
-pizzavanger.addEventListener("touchstart", function(event) {
-  isDragging = true;
-  startX = event.touches[0].clientX;
-  startY = event.touches[0].clientY;
+hammer.on("pan", function(event) {
+  var deltaX = event.deltaX;
+  var deltaY = event.deltaY;
+  pizzavanger.style.transform = "translate(" + deltaX + "px, " + deltaY + "px)";
 });
 
-pizzavanger.addEventListener("touchmove", function(event) {
-  if (isDragging) {
-    var currentX = event.touches[0].clientX;
-    var currentY = event.touches[0].clientY;
-    translateX += currentX - startX;
-    translateY += currentY - startY;
-    startX = currentX;
-    startY = currentY;
-    pizzavanger.style.transform = "translate(" + translateX + "px, " + translateY + "px)";
-  }
-});
-
-pizzavanger.addEventListener("touchend", function(event) {
-  isDragging = false;
-});
 
 function handleKeyboardInput(e) {
   // move the player left or right based on the arrow key pressed
