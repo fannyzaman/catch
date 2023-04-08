@@ -89,6 +89,8 @@ var pizzavanger = document.getElementById("pizzavanger");
 
 var hammertime = new Hammer(pizzavanger);
 
+import * as Hammer from "hammerjs";
+
 hammertime.on("pan", function(event) {
   var deltaX = event.deltaX;
   var deltaY = event.deltaY;
