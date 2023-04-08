@@ -85,33 +85,6 @@ function caughtPizza() {
   document.getElementById("scoreText").innerText = "Score: " + score;
   document.getElementById("pizza").src = pizzaImages[randomNumber(0, pizzaImages.length - 1)];
 }
-var pizzavanger = document.getElementById("pizzavanger");
-
-var hammertime = new Hammer(pizzavanger);
-
-import * as Hammer from "hammerjs";
-
-hammertime.on("pan", function(event) {
-  var deltaX = event.deltaX;
-  var deltaY = event.deltaY;
-  var newX = pizzavanger.offsetLeft + deltaX;
-  var newY = pizzavanger.offsetTop + deltaY;
-  var maxX = gameBoard.offsetWidth - pizzavanger.offsetWidth;
-  var maxY = gameBoard.offsetHeight - pizzavanger.offsetHeight;
-  if (newX < 0) {
-    newX = 0;
-  } else if (newX > maxX) {
-    newX = maxX;
-  }
-  if (newY < 0) {
-    newY = 0;
-  } else if (newY > maxY) {
-    newY = maxY;
-  }
-  pizzavanger.style.left = newX + "px";
-  pizzavanger.style.top = newY + "px";
-});
-
 
 function handleKeyboardInput(e) {
   // move the player left or right based on the arrow key pressed
