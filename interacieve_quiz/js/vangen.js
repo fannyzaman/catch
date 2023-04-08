@@ -87,12 +87,27 @@ function caughtPizza() {
 }
 var pizzavanger = document.getElementById("pizzavanger");
 
-var hammer = new hammer(pizzavanger);
+var hammertime = new Hammer(pizzavanger);
 
-hammer.on("pan", function(event) {
+hammertime.on("pan", function(event) {
   var deltaX = event.deltaX;
   var deltaY = event.deltaY;
-  pizzavanger.style.transform = "translate(" + deltaX + "px, " + deltaY + "px)";
+  var newX = pizzavanger.offsetLeft + deltaX;
+  var newY = pizzavanger.offsetTop + deltaY;
+  var maxX = gameBoard.offsetWidth - pizzavanger.offsetWidth;
+  var maxY = gameBoard.offsetHeight - pizzavanger.offsetHeight;
+  if (newX < 0) {
+    newX = 0;
+  } else if (newX > maxX) {
+    newX = maxX;
+  }
+  if (newY < 0) {
+    newY = 0;
+  } else if (newY > maxY) {
+    newY = maxY;
+  }
+  pizzavanger.style.left = newX + "px";
+  pizzavanger.style.top = newY + "px";
 });
 
 
