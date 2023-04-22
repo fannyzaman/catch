@@ -86,6 +86,7 @@ function caughtPizza() {
   document.getElementById("pizza").src = pizzaImages[randomNumber(0, pizzaImages.length - 1)];
 }
 
+
 function handleKeyboardInput(e) {
   // move the player left or right based on the arrow key pressed
   if (e.keyCode == 37) { // left arrow
